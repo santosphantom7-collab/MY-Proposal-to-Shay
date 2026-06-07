@@ -1,0 +1,404 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forever Proposal for Shay</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg,#0f172a,#1e293b,#020617);
+    color:white;
+    overflow-x:hidden;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.envelope-container{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+.envelope{
+    width:320px;
+    height:220px;
+    position:relative;
+    cursor:pointer;
+    transition:1s;
+}
+
+.envelope-body{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#f8e7c7;
+    border-radius:10px;
+    z-index:1;
+}
+
+.flap{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#e8d2a4;
+    clip-path:polygon(0 0,100% 0,50% 60%);
+    transform-origin:top;
+    transition:1.5s;
+    z-index:2;
+}
+
+.envelope.open .flap{
+    transform:rotateX(180deg);
+}
+
+.click-text{
+    margin-top:30px;
+    font-size:1.3rem;
+    color:#ffd700;
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    50%{opacity:.4;}
+}
+
+.letter{
+    display:none;
+    animation:fadeIn 3s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.section{
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(12px);
+    padding:35px;
+    border-radius:20px;
+    margin-bottom:25px;
+    line-height:1.9;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+    color:#ffd700;
+}
+
+.poem{
+    text-align:center;
+    font-style:italic;
+    color:#ffd6e7;
+    margin:30px 0;
+}
+
+.question{
+    text-align:center;
+    font-size:2rem;
+    color:#ff8fab;
+    margin-top:30px;
+}
+
+.yes-button{
+    display:block;
+    margin:40px auto;
+    padding:18px 40px;
+    border:none;
+    border-radius:50px;
+    background:#ff4d6d;
+    color:white;
+    font-size:1.2rem;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.yes-button:hover{
+    transform:scale(1.08);
+}
+
+.fireworks{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:black;
+    overflow:hidden;
+    z-index:999;
+}
+
+.firework{
+    position:absolute;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    animation:explode 2s infinite;
+}
+
+@keyframes explode{
+    0%{
+        transform:translateY(0) scale(1);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-250px) scale(10);
+        opacity:0;
+    }
+}
+
+.final-message{
+    display:none;
+    min-height:100vh;
+    padding:50px;
+    text-align:center;
+    background:black;
+    color:white;
+}
+
+.final-message h1{
+    font-size:4rem;
+    margin-bottom:30px;
+}
+
+.promise{
+    max-width:800px;
+    margin:auto;
+    line-height:2;
+    font-size:1.2rem;
+}
+
+.signature{
+    margin-top:50px;
+    font-size:2rem;
+    color:#ffd700;
+}
+</style>
+</head>
+
+<body>
+
+<div class="envelope-container" id="start">
+
+    <div class="envelope" id="envelope">
+        <div class="flap"></div>
+        <div class="envelope-body"></div>
+    </div>
+
+    <div class="click-text">
+        💌 Shay, Open Your Letter 💌
+    </div>
+
+</div>
+
+<div class="container letter" id="letter">
+
+<div class="section">
+
+<h1>To My Dearest Shay ❤️</h1>
+
+<p>
+If this letter has found its way into your hands,
+then it carries more than words.
+It carries every smile you've given me,
+every thought you've occupied,
+every dream that became brighter because you were in it.
+</p>
+
+<div class="poem">
+<h2>🌹 The Day I Found You 🌹</h2>
+
+Among a million passing faces,<br>
+A million stories left untold,<br>
+I found a pair of eyes that felt<br>
+Like coming home from the cold.<br><br>
+
+Somewhere between a hello<br>
+And a smile,<br>
+You became my favorite chapter.
+</div>
+
+<p>
+There are people we meet,
+and then there are people who arrive.
+You are one of those people.
+You turned ordinary days into memories,
+and simple conversations into moments I never wanted to end.
+</p>
+
+<div class="poem">
+<h2>🌙 If I Had One Wish 🌙</h2>
+
+If I had one wish,<br>
+I wouldn't ask for riches.<br>
+I wouldn't ask for fame.<br>
+I'd simply ask for more moments with you.<br><br>
+
+More mornings.<br>
+More laughter.<br>
+More memories.<br>
+More forever.
+</div>
+
+<p>
+Shay, I don't just love who you are.
+I love who I become when I'm with you.
+You inspire me.
+You calm me.
+You challenge me.
+You make me believe that the best parts of life are still ahead.
+</p>
+
+<div class="poem">
+<h2>✨ Forever ✨</h2>
+
+Forever isn't a word.<br>
+It's a promise.<br><br>
+
+It's choosing the same person<br>
+Again and again.<br><br>
+
+When life is easy.<br>
+When life is hard.<br>
+When we're young.<br>
+When we're old.<br><br>
+
+I'd still choose you.
+</div>
+
+<div class="question">
+Will You Be Mine Forever, Shay? ❤️
+</div>
+
+<button class="yes-button" onclick="sayYes()">
+YES ❤️
+</button>
+
+</div>
+
+</div>
+
+<div class="fireworks" id="fireworks"></div>
+
+<div class="final-message" id="final">
+
+<h1>🎆 SHE SAID YES 🎆</h1>
+
+<div class="poem">
+
+When the stars forget to shine,<br>
+And time has run its course,<br>
+My hand will still reach for yours.<br><br>
+
+When years become decades,<br>
+And decades become memories,<br>
+I will still look at you<br>
+The way I do today.<br><br>
+
+With wonder.<br>
+With gratitude.<br>
+With love.<br>
+Forever.
+</div>
+
+<div class="promise">
+
+<h2>💍 My Promise To You 💍</h2>
+
+I promise to cherish you when life is beautiful.
+
+I promise to hold you when life is difficult.
+
+I promise to celebrate your victories and stand beside you through every struggle.
+
+I promise to respect your heart, protect your peace, and love you with everything I have.
+
+I promise to keep choosing you.
+
+Every sunrise.
+
+Every sunset.
+
+Every chapter.
+
+Every lifetime.
+
+As long as my heart beats, it will beat for you.
+
+And if forever exists beyond this life,
+I will spend that forever loving you too.
+
+</div>
+
+<div class="signature">
+❤️ Forever Yours ❤️
+</div>
+
+</div>
+
+<script>
+const envelope = document.getElementById("envelope");
+
+envelope.addEventListener("click", () => {
+    envelope.classList.add("open");
+
+    setTimeout(() => {
+        document.getElementById("start").style.display="none";
+        document.getElementById("letter").style.display="block";
+    },1500);
+});
+
+function sayYes(){
+
+    document.getElementById("letter").style.display="none";
+
+    const fireworks=document.getElementById("fireworks");
+    fireworks.style.display="block";
+
+    for(let i=0;i<120;i++){
+
+        let spark=document.createElement("div");
+        spark.classList.add("firework");
+
+        spark.style.left=Math.random()*100+"%";
+        spark.style.top=Math.random()*100+"%";
+
+        spark.style.background=
+        `hsl(${Math.random()*360},100%,70%)`;
+
+        spark.style.animationDelay=
+        Math.random()*2+"s";
+
+        fireworks.appendChild(spark);
+    }
+
+    setTimeout(()=>{
+        fireworks.style.display="none";
+        document.getElementById("final").style.display="block";
+    },6000);
+}
+</script>
+
+</body>
+</html>
+```
